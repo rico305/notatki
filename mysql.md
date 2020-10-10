@@ -7,7 +7,7 @@ Wybieranie tabeli użytkowej: `use 'name';`
 ## Tworzenie
 Tworzenie bazy danych: `create database 'database_name';`<br>
 Tworzenie tabeli: `create table 'table_name' (column1 datatype(size), column2 datatype(size), ...);`<br>
-Tworzenie klucza głównego: `create table 'table_name (primary_key_name, int primary key auto_increment);`
+Tworzenie klucza głównego: `create table 'table_name (primary_key_name int primary key auto_increment);`
 
 ## Usuwanie
 Usuwanie tabeli: `drop table 'table_name'`;
