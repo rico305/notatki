@@ -1,4 +1,11 @@
 # PHP - ważne notatki
+## Spis treści
+1. [echo() vs print() vs print_r()](#echo()%20vs%20print()%20vs%20print_r())
+2. [Cudzysłów, a apostrof](Cudzysłów,%20a%20apostrof)
+3. [Tablice](#Tablice)
+4. [Operatory](#operatory)
+5. [Instrukcje warunkowe](#instrukcje%20warunkowe)
+
 ## echo() vs print() vs print_r()
 
 echo | print() | print_r()
@@ -34,7 +41,6 @@ $c = 'Spytał się: "Dokąd idziesz?".';
 echo $a; //Wypisuje: Spytał się: "Dokąd idziesz?".
 echo $b; //Wypisuje: Spytał się: \"Dokąd idziesz?\".
 echo $c; //Wypisuje: Spytał się: "Dokąd idziesz?".
-
 ```
 
 W cudzysłowiach możemy używać znaków specjalnych takich jak:
@@ -47,13 +53,13 @@ znak | znaczenie
 ## Tablice
 Różne, równoważne sposoby definiowania tablic:
 ```php
-$marki = array('BMW', 'Maserati', 'Bugatti');
-$marki = ['BMW', 'Maserati', 'Bugatti'];
+$brands = array('BMW', 'Maserati', 'Bugatti');
+$brands = ['BMW', 'Maserati', 'Bugatti'];
 
-$marki = [];
-$marki[] = 'BMW';
-$marki[] = 'Maserati';
-$marki[] = 'Bugatti';
+$brands = [];
+$brands[] = 'BMW';
+$brands[] = 'Maserati';
+$brands[] = 'Bugatti';
 ```
 
 ### Tablice asocjacyjne
@@ -109,5 +115,26 @@ Sposób drugi (z zastsowoanie instrukcji 'end') możemy stosować również z in
 ### Sposób 3:
 ```php
 $var = ( warunek ) ? $valueWhenTrue : $valueWhenFalse;
+```
+Jeśli warunek jest prawdziwy, do zmiennej `$var` przypisana zostaje wartość zmiennej `$valueWhenTrue`, w przeciwnym wypadku `$valueWhenFalse`;
 
+### Inna wersja:
+```php
+$var = $value ?? $default;
+```
+Jeśli jest zdefioniowana zmienna `$value`, to do zmiennej `$var` zostanie przypisana jej wartość, jeśli nie, przypisana zostanie wartość zmiennej `$default`;
+
+Jest to analogiczny zapis do tego:
+```php 
+if(isset($value))
+{
+    $var = $value;
+} else 
+{
+    $var = $default;
+}
+```
+oraz tego:
+```php
+$var = isset($value) ? $value : $default;
 ```
