@@ -1,7 +1,7 @@
 # PHP - ważne notatki
 ## Spis treści
 1. [echo() vs print() vs print_r()](#echo()%20vs%20print()%20vs%20print_r())
-2. [Cudzysłów, a apostrof](Cudzysłów,%20a%20apostrof)
+2. [Cudzysłów, a apostrof](#Cudzysłów%20a%20apostrof)
 3. [Tablice](#Tablice)
 4. [Operatory](#operatory)
 5. [Instrukcje warunkowe](#instrukcje%20warunkowe)
