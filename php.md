@@ -126,7 +126,7 @@ Jeśli jest zdefioniowana zmienna `$value`, to do zmiennej `$var` zostanie przyp
 
 Jest to analogiczny zapis do tego:
 ```php 
-if(isset($value))
+if( isset($value) )
 {
     $var = $value;
 } else 
