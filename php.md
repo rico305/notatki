@@ -43,3 +43,71 @@ znak | znaczenie
 \n | Nowa linia
 \t | Tabulator
 \\\ | Backslash
+
+## Tablice
+Różne, równoważne sposoby definiowania tablic:
+```php
+$marki = array('BMW', 'Maserati', 'Bugatti');
+$marki = ['BMW', 'Maserati', 'Bugatti'];
+
+$marki = [];
+$marki[] = 'BMW';
+$marki[] = 'Maserati';
+$marki[] = 'Bugatti';
+```
+
+### Tablice asocjacyjne
+Tablice asocjacyjne, to takie, w każdy element tablicy ma odpowiadający sobie indywidualny klucz.
+
+Definiowanie tablicy asocjacyjnej i jej elementów:
+```php
+$book = [
+    'id' => 1,
+    'title' => 'Pan Tadeusz'
+];
+$book['author'] = 'Adam Mickiewicz';
+
+echo $book['title']; //Wypisuje: Pan Tadeusz
+
+print_r($book); // Wypisuje: array( [id] => 1 [title] => Pan Tadeusz [author] => Adam Mickiewicz)
+```
+
+## Operatory
+Operator | Znaczenie
+:--:|:-:
++|Dodawanie
+-|Odjmowanie
+*|Mnożenie
+/|Dzielenie
+**|Potęgowanie
+%|Modulo (reszta z dzielenia)
+++|Inkrementacja (zwiększenie o 1)
+--|Dekrementacja (zmniejszenie o 1)
+
+## Instrukcje warunkowe
+
+### Sposób 1:
+```php
+if ( warunek ) {
+    ...
+}
+elseif {
+    ...
+}
+```
+### Sposób 2 (zastosowanie instrukcji `end`):
+```php
+if ( warunek ) :
+    ...
+elseif : 
+    ...
+endif;
+```
+
+Sposób drugi (z zastsowoanie instrukcji 'end') możemy stosować również z innymi instrukcjami sterującymi jak np `while (endwhile)`, `for (endfor)` itd.
+
+### Sposób 3:
+```php
+$var = ( warunek ) ? $valueWhenTrue : $valueWhenFalse;
+
+```
